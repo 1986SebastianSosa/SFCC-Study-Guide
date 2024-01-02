@@ -173,6 +173,10 @@
 
 ### Get to Know B2C Commerce Cartridges
 
+- A Cartidge is a container for packaging and deploying a program's Code and Data
+    - Generic Cartridges: reusable functionality applicable to numerous sites
+    - Application Specific Cartridges: specific functionality for a particular site
+    - Third Party Cartridges: adtional functionality like tax calculation or credit card processing
 - List three ways you can use a cartridge.
     - Controllers
     - Form definitions
@@ -224,12 +228,14 @@
     - sgmf-scripts
 - Explain the benefit of disabling page caching.
     - Disabling page caching lets developers see changes on the storefront without waiting for the cache to expire
+    - `Administration > Sites > Manage Sites > site > Cache`
 - List three ways to view cartridges on the server.
     - Business Manager
     - Web URL
     - WebDAV
 - Explain why rule-based storefront URLs should be disabled.
     - Rule-based storefront URLs may conflict with a default controller URL currently being worked on
+    - `Merchant Tools > Site Preferences > Storefront URL`
 
 ### Customize Cartridges
 
@@ -241,5 +247,11 @@
     - Lint scss or js files.
     - Create a new cartridge structure.
 - Describe how you can override the app_storefront_base cartridge.
+    - We create a custom cartridge and put it to the left of the base cartridge on the cartridge path. To do that we:
+        - Open the command line.
+        - Create a project folder: mkdir cloudkicks
+        - Navigate into the folder: cd cloudkicks
+        - Create a new cartridge: npx sgmf-scripts --createCartridge app_custom_cloudkicks
+        - Install the dependencies required by the new cartridge: npm install
 - Explain how the global .scss file inherits styles.
 - Describe how to include JavaScript modules from other cartridges.
