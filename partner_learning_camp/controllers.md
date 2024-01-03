@@ -20,3 +20,24 @@
     - Mobile-optimized UX with streamlined mobile checkout flows 
     - Touch-friendly icons.
 - List two benefits of SFRA over SiteGenesis.
+
+## Routes
+
+- These are ExpressJS middleware chains. Each  middleware takes three arguments, `req`, `res` and `next`. 
+- `req` parses query string parameters to `req.querystring`
+- `res` have:
+    - `res.cacheExpiration(24)`: Sets cache to 24 hours from now
+    - `res.render(templateName, data)`: renders template and assigns data to `pdict` object
+    - `res.json(data)`: Prints a JSON object with the data
+    - `res.setViewData(data)`: Sets the output object. Useful to add multiple objects to `pdict`
+    - `setViewData`: Merges all data passed into a single object
+- `next` tells the server to execute the next middleware in the chain
+
+## Module Extension
+
+- We can extend Controllers, Models and Scripts with `server.extend(module.superModule)`
+    - With this we can access the same route and module that's available in the following cartidge in the cartridge path
+- For controllers:
+    - `append`: extends functionality by executing AFTER the superModule route
+    - `prepend`: extends functionality by executing BEFORE the superModule route
+    - `replace`: overrides the superModule route
