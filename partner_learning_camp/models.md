@@ -1,4 +1,4 @@
-# Models
+# [Models](https://salesforcecommercecloud.github.io/b2c-dev-doc/docs/current/scriptapi/html/index.html)
 
 - Models are a representation of data in an MVC architecture
 - Two types:
