@@ -59,6 +59,15 @@
 - Uses the `<isinclude>` tag to use templates inside other templates
 - Any page variable from the encompasing template is available in the included template
 
+## Remote Includes
+
+- It's used to call another controller route and include it's rendered HTML on the current page
+- Ex: `<isinclude url="${URLUtils.url('Cart-MiniCart')}"/>`
+- It allows to use different caching for different components of the page
+- It uses the `dw.web.URLUtils`
+- No parameters get passed to the caled controller when using a remote include. There are methods in the URLUtils class that allows for that
+    - Ex. homePage.isml is cached for 24hs. It uses a remote include for the minicart which is not cached
+
 ## Localize ISML Templates
 
 - templates/default has templates used by the default locale
@@ -69,5 +78,6 @@
     - `address_fr_FR.properties` will override `address.properties` when the selected locale is France in the Storefront
     - To render localized strings we use the `dw.util.Resource` API
         - `${Resource.msg('msg.no.saved.addresses','address', null)}`: Key, Bundle, Default
+- The en_US identifier in the URL tells the site wich resource bundles to use and which localized templates
 
 
