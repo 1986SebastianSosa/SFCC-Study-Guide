@@ -42,11 +42,11 @@
 - The `<isdecorate>` tag is used to specify which decorator to use
 - The `<isreplace>` tag is used to indicate where the content of the page using the decorator should go
 - Ex:
-    <div class="page" data-action="${pdict.action}" data-querystring="${pdict.queryString}" >
+    ```<div class="page" data-action="${pdict.action}" data-querystring="${pdict.queryString}" >
     <isinclude template="/components/header/pageHeader" />
     <div role="main" id="maincontent">
                 <isreplace/>
     </div>
     <isinclude template="/components/footer/pageFooter" />
-    </div>
+    </div>```
 
