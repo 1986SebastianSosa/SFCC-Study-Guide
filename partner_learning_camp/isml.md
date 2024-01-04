@@ -33,3 +33,20 @@
 - ISML expressions
     - `${X}`: X can be a variable or a boolean condition
 
+## Decorators
+
+- A decorator template is an "encapsulating" template reused by another template
+- There are two decorator templates used in SFRA
+    - `checkout.isml` - Doesn't contain the header menu
+    - `page.isml` - Does contain the header menu
+- The `<isdecorate>` tag is used to specify which decorator to use
+- The `<isreplace>` tag is used to indicate where the content of the page using the decorator should go
+- Ex:
+    `<div class="page" data-action="${pdict.action}" data-querystring="${pdict.queryString}" >
+            <isinclude template="/components/header/pageHeader" />
+            <div role="main" id="maincontent">
+                <isreplace/>
+            </div>
+            <isinclude template="/components/footer/pageFooter" />
+        </div>`
+
