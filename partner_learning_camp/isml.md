@@ -51,7 +51,23 @@
              </div>
         <isinclude template="/components/footer/pageFooter" />
     </div>
-    
+
     ```
+
+## Local Includes
+
+- Uses the `<isinclude>` tag to use templates inside other templates
+- Any page variable from the encompasing template is available in the included template
+
+## Localize ISML Templates
+
+- templates/default has templates used by the default locale
+- templates/fr_FR has templates rendering in french from France. templates/fr_CA has templates rendering in french from Canada
+- In BM the locales can be found in `Merchant Tools > Site Preferencefs > Locales`
+- To localize streings we use Resource Bundles found in `templates/resources`
+    - For "address", for ex, the default resource is `address.properties` while for france it's `address_fr_FR.properties`
+    - `address_fr_FR.properties` will override `address.properties` when the selected locale is France in the Storefront
+    - To render localized strings we use the `dw.util.Resource` API
+        - `${Resource.msg('msg.no.saved.addresses','address', null)}`: Key, Bundle, Default
 
 
