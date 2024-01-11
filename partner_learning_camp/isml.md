@@ -8,11 +8,20 @@
     - Receive JSON Model from the Controller
     - This happens using ISML and HTML tags
     - Can use custom CSS and JS using the <isscript> tag
+- Several SFCC Classes are included in templates. These are:
+    - dw.system.Request
+        - Ex. `<p>${request.httpLocale}</p>`
+    - dw.system.Session
+        - Ex. `<p>${session.customer.profile.firstName}</p>`
+    - dw.system.StringUtils
+        - Ex. `${stringUtils.https('Home-Show').toString()}`
+    - dw.system.URLUtils
+        - Ex. `<p>${URLUtils.url}</p>`
 
 ## Tags
 - `<isset>` create local variables and sets the value for them
 - `<isobject>` for active data collections
-- `<isinclude>` for local includes
+- `<isinclude>` for local (`template="..."`) or remote (`url="..."`)includes
 - `<isloop>` loops over a collection
 - `<isif>` conditional
 
