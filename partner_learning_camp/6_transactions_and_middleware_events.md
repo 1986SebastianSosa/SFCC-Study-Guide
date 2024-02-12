@@ -10,18 +10,20 @@
     - After importing the file, in `Import & Export` we import the metadata from that file
     - To find the newly created CO we go to `Administration > Site Development > Custom Object Types`
     - To create a CO instance: `Merchant Tools > Custom Objects > Custom Object Editor` and click `new`
-
-## Transactions
-
+- We have a Manager Class for COs: `dw/object/CustomObjectMgr`
 - To create a CO with code:
     ```
     var CustomObjectMgr = require(dw/object/CustomObjectMgr);
 
-    //The first parameter is the CO defined in BM, the second is the primary key for CO instance
+    //The first parameter is the CO Type defined in BM, the second is the primary key for CO instance
     var co = CustomObjectMgr.createCustomObject('NewsletterSubscription', 'newsletterForm.email.value');
 
     co.custom.<atribute> = form.formField.value; // Initialize data on the CO
     ```
+
+## Transactions
+
+
 - To persist the data from this CO we need a transaction:
 ```
 //Get access to the transaction class
@@ -37,7 +39,7 @@ txn.commit();
 txn.rollback();
 }
 
-//Implicit Transaction: Commits or Rolback automatically depending on the success or failure of the code
+//Implicit Transaction: Commits or Rollback automatically depending on the success or failure of the code
 txn.wrap(function(){
     //Create or Modify Persistent Object
 })
@@ -60,6 +62,10 @@ Logger.getLogger('payment_auth_category').warn(...);
 ```
 - Anything unusual that occurs during your code execution will get logged automatically
 - Anything that you can identify ahead of time as a possible problem would be best logged to a custom log file or category
+- Ex:
+```
+Logger.warn(`The current product is {0} with name {1}`, myProduct.getID(), myProduct.getName());
+```
 
 ## Middleware Chain Events
 

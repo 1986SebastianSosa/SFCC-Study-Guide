@@ -10,7 +10,7 @@
 
 ## Salesforce Commerce API COnfiguration
 - We need:
-    - Real ID: 4 character real id for the envs
+    - Realm ID: 4 character real id for the envs
     - Intance ID: specific value that points to an instance (3 digit SB id, prd, stg, dev)
     - API Site ID: RefArch, for ex.
     - Organization ID: the concatenation of `f_ecom_{realmID}_{instanceID}`

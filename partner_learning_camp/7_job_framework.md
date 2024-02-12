@@ -16,3 +16,9 @@
 - Define a `steptypes.json` file in our cartridge
 - Create a script that implements the function defined in `steptypes.json`
 - Find the custom step in BM and configure it
+- To add a custom status code "No_Files_Found":
+```
+const Status = require('dw/system/Status);
+
+return new Status(Status.OK, 'No_Files_Found');
+```

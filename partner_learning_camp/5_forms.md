@@ -8,12 +8,22 @@
     - mandatory
     - max-length
     - type
-- For forms there's alsoan `<include>` tag to include other forms in it
+- For forms there's also an `<include>` tag to include other forms in it
     - Ex:
     ```
     <include formid="states" name="states" missing-error="address.state.missing" parse-error="error.message.required" value-error="error.message.required"/>
     ```
 - `missing-error` or `range-error`, for example, are localizable error msgs found in resource bundles
+- We can give the user a set of options to select from:
+```
+<options>
+    <option ... />
+    <option ... />
+    <option ... />
+</options>
+```
+
+## Rendering a Form
 - A controller renders the isml template to which we pass:
     - An actionURL (the URL the form will submit to)
     - The form extracted with `server.form.getForm()` (we can also clear this form with the `clear()` method)
@@ -31,6 +41,7 @@
                     value="${pdict.newsletterForm.fname.attributes}" encoding="off" />>
                 <div class="invalid-feedback"></div>
         ```
+
 ## Two ways to submit a form:
 
 ### Without Client JS 

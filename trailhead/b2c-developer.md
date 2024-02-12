@@ -24,7 +24,7 @@
     - Manage customer lists and content libraries
     - Configure global settings such as
         - Locales and regional settings to support multiple languages
-        - Password restrictions and login lockout policies for Business     - Manager users
+        - Password restrictions and login lockout policies for Business Manager users
         - Time zones
         - Order and customer sequence numbers
 - Describe two features of the localization settings.
@@ -224,7 +224,7 @@
 ### Upload and Configure Cartridges
 
 - Explain which tools you can use to upload Storefront Reference Architecture (SFRA).
-    - dwpload
+    - dwupload
     - sgmf-scripts
 - Explain the benefit of disabling page caching.
     - Disabling page caching lets developers see changes on the storefront without waiting for the cache to expire

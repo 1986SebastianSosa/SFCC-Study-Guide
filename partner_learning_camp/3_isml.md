@@ -74,7 +74,7 @@
 - Ex: `<isinclude url="${URLUtils.url('Cart-MiniCart')}"/>`
 - It allows to use different caching for different components of the page
 - It uses the `dw.web.URLUtils`
-- No parameters get passed to the caled controller when using a remote include. There are methods in the URLUtils class that allows for that
+- No parameters get passed to the called controller when using a remote include. There are methods in the URLUtils class that allows for that
     - Ex. homePage.isml is cached for 24hs. It uses a remote include for the minicart which is not cached
 
 ## Localize ISML Templates

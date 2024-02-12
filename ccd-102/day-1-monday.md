@@ -10,13 +10,13 @@
     - No programming actually happens in Java
   - Make sure node version `4.0 =<  version < 12.0.0` for CLI exercises
 - Salesforce B2C Commerce Integrations
-  - B2C Commerce is not the source if truth for product inventory
+  - B2C Commerce is not the source of truth for product inventory
 - Instances
 - B2C Commerce Infrastructure
   - POD: Point of Delivery
     - Salesforce owned, in third party data centers
   - Realm: Within POD
-    - Cannot communicate directtly with each other
+    - Cannot communicate directly with each other
     - Must import/export
     - PIG: Primary Instance Group
       - Development, Staging, Production
@@ -37,7 +37,7 @@
     - Salesforce will not help with issues arising from this
   - If multiple sites share branding, separate common functionality and site specific functionality
 - Model View Controller (MVC) Architectural Pattern
-  - Promotes modular and maintainable coe
+  - Promotes modular and maintainable code
   - Pattern, not requirement
 - Business Manager
   - 15 minute inactivity timeout for login
